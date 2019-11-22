@@ -36,13 +36,37 @@ class ClienteControlador extends Controller
      */
     public function store(Request $request)
     {
+        $regas= [
+            
+            'name' => 'required|min:3|max:25',
+            'cpf' => 'required|min:11|max:11|unique:clientes',
+            'phone'=> 'required|min:9|max:12',
+            'email'=> 'required|email'
+        ];
 
-       
+        $mensagens = [
+
+            'required' => 'O campo :attribute é obrigatório.',
+            'nome.min' => 'O nome não poder ter menos que 3 letras.',
+            'nome.max' => 'O nome não pode ter mais que 25 letras.',
+            'cpf.min' => 'O CPF não pode ter menos que 11 dígitos.',
+            'cpf.max' => 'O CPF não pode ter mais que 11 dígitos. Não é necessario colocar pontos e traços.',
+            'cpf.unique' => 'Esse CPF já existe.',
+            'phone.min' => 'Número de telefone muito curto. Verifique o se número está correto.',
+            'phone.max' => 'Número de telefone muito longo. Verifique o se o número está correto.',
+            'email.email' => 'Digite um E-mail valido.'
+
+        ];
+
+        $request ->validate($regas, $mensagens);
+
+        /*
         $request->validate([
             'name' => 'required|min:3|max:25',
-            'cpf' => 'min:11|max:11|unique:clientes',
-            'phone'=> 'min:9|max:12'
-        ]); 
+            'cpf' => 'required|min:11|max:11|unique:clientes',
+            'phone'=> 'min:9|max:12',
+            'email'=> 'email'
+        ]); */
 
         $cliente = new Cliente();
         $cliente->name = $request->input('name');

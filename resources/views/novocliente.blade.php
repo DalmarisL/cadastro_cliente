@@ -24,55 +24,96 @@
                             @csrf
                             <div class="form-group">
                                 <label for="name"> Nome do  Cliente </label>
-                                <input type="text" id="name" class="form-control" name="name" placeholder="Nome do Cliente">
+                                <input type="text" id="name" 
+                                        class="form-control {{ $errors->has('name') ? 'is-invalid' : ''}}" 
+                                        name="name" placeholder="Nome do Cliente">
+@if(($errors->has('name')))
+                                <div class="invalid-feedback">
+{{ $errors-> first('name') }}
+
+                                </div>
+@endif
                             </div>
                             <div class="form-group">
                                 <label for="adress"> Endereço </label>
-                                <input type="text" id="adress" class="form-control" name="adress" placeholder="Endereço">
+                                <input type="text" id="adress" 
+                                        class="form-control" 
+                                        name="adress" placeholder="Endereço">
                             </div>
+
+
                             <div class="form-group">
                                 <label for="city"> Cidade </label>
-                                <input type="text" id="city" class="form-control" name="city" placeholder="Cidade">
+                                <input type="text" id="city" 
+                                        class="form-control" 
+                                        name="city" placeholder="Cidade">
                             </div>
+
+
                             <div class="form-group">
                                 <label for="state"> Estado </label>
-                                <input type="text" id="state" class="form-control" name="state" placeholder="Estado">
+                                <input type="text" id="state" 
+                                     class="form-control" 
+                                        name="state" placeholder="Estado">
                             </div>
+
+
                             <div class="form-group">
-                                <label for="cpf"> Cpf </label>
-                                <input type="text" id="cpf" class="form-control" name="cpf" placeholder="CPF do Cliente">
+                                <label for="cpf"> CPF </label>
+                                <input type="text" id="cpf"
+                                        class="form-control {{ $errors->has('cpf') ? 'is-invalid' : ''}}" 
+                                        name="cpf" placeholder="CPF do Cliente">
+@if(($errors->has('cpf')))
+                                <div class="invalid-feedback">
+{{ $errors-> first('cpf') }}
+
+                                </div>
+@endif
                             </div>
+
+
                             <div class="form-group">
                                 <label for="phone"> Telefone </label>
-                                <input type="text" id="phone" class="form-control" name="phone" placeholder="Número de Telefone">
+                                <input type="text" id="phone" 
+                                        class="form-control {{ $errors->has('phone') ? 'is-invalid' : ''}}" 
+                                        name="phone" placeholder="Número de Telefone">
+@if(($errors->has('phone')))
+                                <div class="invalid-feedback">
+{{ $errors-> first('phone') }}
+
+                                </div>
+@endif
                             </div>
+
+
                             <div class="form-group">
                                 <label for="email"> E-mail </label>
-                                <input type="text" id="email" class="form-control" name="email" placeholder="@">
+                                <input type="text" id="email" 
+                                        class="form-control {{ $errors->has('email') ? 'is-invalid' : ''}}" 
+                                        name="email" placeholder="@">
+@if(($errors->has('email')))
+                                <div class="invalid-feedback">
+{{ $errors-> first('email') }}
+
+                                </div>
+@endif
                             </div> 
+
+                            
                             <button type="submit" class="btn-primary btn-sm">Salvar</button>
                             <button type="cancel" class="btn-danger btn-sm">Cancelar</button>
                         </form>
                     </div>
-@if($errors->any())
-                    <div class="card-footer">
-    @foreach($errors->all() as $error) 
-                        <div class="alert alert-danger" role="alert">
-                            {{ $error }}
-                        </div>
-    @endforeach
+
+                    <div class="card-footer"></div>
+
 
                     </div>
-@endif
+
                 </div>
             </div>
         </div>    
     </main>
-
-    @if(isset($errors))
-    {{ var_dump($errors) }}
-    @endif
-
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
