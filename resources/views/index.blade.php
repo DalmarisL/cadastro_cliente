@@ -22,12 +22,11 @@
                         <p class="card-text">
                             Aqui você pode visuzlizar seus clientes.
                         </p>
-                        <a href="/" class="btn btn-primary btn-sm">Listar Clientes</a>
+                        <a href="/clientes" class="btn btn-primary btn-sm">Listar Clientes</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 @endsection

@@ -9,6 +9,9 @@
         .navbar{
             margin-bottom: 20px;
         }
+        .btn{
+            margin: 5px;
+        }
     </style>
     <title>Cadastro de Clientes</title>
     </header>

@@ -20,5 +20,7 @@ Route::get('/', function (){
 
 Route::get('/novocliente', 'ClienteControlador@create');
 
-Route::post('/cliente', 'ClienteControlador@store');
+Route::get('/clientes', 'ClienteControlador@index');
+
+Route::post('/clientes', 'ClienteControlador@store');
 

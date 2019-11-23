@@ -13,7 +13,7 @@
                     <a class="nav-link" href="/novocliente">Novo Cliente</a>
                 </li> 
             <li class="nav-item active">
-                <a class="nav-link" href="#">Listar Clientes</a>
+                <a class="nav-link" href="/clientes">Listar Clientes</a>
             </li>           
           </ul>
         </div>
