@@ -14,9 +14,11 @@
 //use Symfony\Component\Routing\Route;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/novocliente', 'ClienteControlador@create');
+Route::get('/', function (){
+    return view('index');
+});
 
-Route::get('/', 'ClienteControlador@index');
+Route::get('/novocliente', 'ClienteControlador@create');
 
 Route::post('/cliente', 'ClienteControlador@store');
 

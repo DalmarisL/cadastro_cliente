@@ -15,9 +15,7 @@
             <div class="container col-md-8 offset-md-2">
                 <div class="card border">
                     <div class="card-header">
-                        <div class="card-title">
-                            Cadastro de Cliente
-                        </div>
+                        <h5 class="card-title">Novo Cliente</h5>
                     </div>
                     <div class="card-body">
                         <form action="cliente" method="POST">
@@ -98,18 +96,12 @@
                                 </div>
 @endif
                             </div> 
-
-                            
                             <button type="submit" class="btn-primary btn-sm">Salvar</button>
                             <button type="cancel" class="btn-danger btn-sm">Cancelar</button>
                         </form>
                     </div>
-
                     <div class="card-footer"></div>
-
-
-                    </div>
-
+                </div>
                 </div>
             </div>
         </div>    
