@@ -25,3 +25,7 @@ Route::get('/clientes', 'ClienteControlador@index');
 Route::post('/clientes', 'ClienteControlador@store');
 
 Route::get('/clientes/excluir/{id}', 'ClienteControlador@destroy');
+
+Route::get('/clientes/editar/{id}', 'ClienteControlador@edit');
+
+Route::post('/clientes/{id}', 'ClienteControlador@update');
