@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('body')
         <div class="jumbotron bg-light">
@@ -7,6 +7,7 @@
                             <h5 class="card-title">Lista de Cliente</h5>
                         </div>
                 <div class="card-body">
+                    <div class="container">
                     <table class="table table-ordered table-hover table-striped" id="tabelaClientes">
                        <thead>
                            <tr>
@@ -18,6 +19,7 @@
                                <th scope="col">CPF</th>
                                <th scope="col">Telefone</th>
                                <th scope="col">E-mail</th>
+                               <th scope="col">Ações</th>
                            </tr>
                        </thead>
                        <tbody>
@@ -41,6 +43,7 @@
                    </table>
                 </div>
                 <div class="card-footer"></div>
+                </div>
             </div>
         </div> 
 @endsection
