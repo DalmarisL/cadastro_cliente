@@ -29,3 +29,7 @@ Route::get('/clientes/excluir/{id}', 'ClienteControlador@destroy');
 Route::get('/clientes/editar/{id}', 'ClienteControlador@edit');
 
 Route::post('/clientes/{id}', 'ClienteControlador@update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
