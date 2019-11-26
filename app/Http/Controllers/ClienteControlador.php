@@ -44,9 +44,7 @@ class ClienteControlador extends Controller
             'phone'=> 'required|min:9|max:12',
             'email'=> 'required|email'
         ];
-
         $mensagens = [
-
             'required' => 'O campo :attribute é obrigatório.',
             'nome.min' => 'O nome não poder ter menos que 3 letras.',
             'nome.max' => 'O nome não pode ter mais que 25 letras.',
@@ -56,11 +54,8 @@ class ClienteControlador extends Controller
             'phone.min' => 'Número de telefone muito curto. Verifique o se número está correto.',
             'phone.max' => 'Número de telefone muito longo. Verifique o se o número está correto.',
             'email.email' => 'Digite um E-mail valido.'
-
         ];
-
         $request ->validate($regas, $mensagens);
-
         /*
         $request->validate([
             'name' => 'required|min:3|max:25',
@@ -77,7 +72,8 @@ class ClienteControlador extends Controller
         $cliente->cpf = $request->input('cpf');
         $cliente->phone = $request->input('phone');
         $cliente->email = $request->input('email');
-        $cliente->save();
+        $cliente->save(); 
+        return redirect('/clientes');       
     }
 
     /**
@@ -122,6 +118,10 @@ class ClienteControlador extends Controller
      */
     public function destroy($id)
     {
-        //
+        $clientes = Cliente::find($id);
+        if (isset($c)){
+            $clientes->delete();
+        }
+        return redirect('/clientes');
     }
 }

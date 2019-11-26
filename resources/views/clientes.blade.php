@@ -33,7 +33,7 @@
                                 <td>{{$c->email}}</td>
                                 <td>
                                 <a href="/clientes/editar/{{$c->id}}" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="/clientes/editar/{{$c->id}}" class="btn btn-sm btn-danger">Excluir</a>
+                                <a href="/clientes/excluir/{{$c->id}}" class="btn btn-sm btn-danger">Excluir</a>
                                 </td>
                             </tr>                                  
                            @endforeach

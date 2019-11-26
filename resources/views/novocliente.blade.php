@@ -9,7 +9,7 @@
                     <h5 class="card-title">Novo Cliente</h5>
                 </div>
                 <div class="card-body">
-                    <form action="cliente" method="POST">
+                    <form action="clientes" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="name"> Nome do  Cliente </label>

@@ -24,3 +24,4 @@ Route::get('/clientes', 'ClienteControlador@index');
 
 Route::post('/clientes', 'ClienteControlador@store');
 
+Route::get('/clientes/excluir/{id}', 'ClienteControlador@destroy');
